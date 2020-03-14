@@ -155,8 +155,9 @@
       },
     },
     created() {
-      axios.get('http://apilayer.net/api/live?access_key=09ea3cc6b77bdaf9a7559c85e7ef9227&source=USD&format=1"')
+      axios.get('https://us-central1-forex-api-proxy.cloudfunctions.net/forex')
           .then(response => {
+            console.log(response)
             let tmp = Object.entries(response.data.quotes)
             tmp.forEach(o => {
               this.currencies.push({
