@@ -71,7 +71,7 @@ export default {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
-  padding: 12px;
+  padding: 9px;
   -webkit-box-shadow: 4px 3px 21px rgba(53, 73, 165, 0.6);
   -moz-box-shadow: 4px 3px 21px rgba(53, 73, 165, 0.6);
   box-shadow: 4px 3px 21px rgba(53, 73, 165, 0.6);
@@ -83,7 +83,7 @@ export default {
   }
   .separator {
     border-bottom: 1px solid rgba(58, 76, 128, 0.196784);
-    margin: 12px 0;
+    margin: 6px 0;
   }
 }
 </style>

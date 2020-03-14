@@ -147,8 +147,8 @@
         -webkit-border-radius: 4px;
         -moz-border-radius: 4px;
         border-radius: 4px;
-        height: 46px;
-        margin-bottom: 15px;
+        height: 40px;
+        margin-bottom: 10px;
       }
       .label {
         background: #ffffff;
@@ -157,6 +157,9 @@
         color: #747474;
         padding-left: 16px;
         line-height: 46px;
+        -webkit-border-radius: 4px 0 0 4px;
+        -moz-border-radius: 4px 0 0 4px;
+        border-radius: 4px 0 0 4px;
       }
       .value {
         background: #EDEDED;
@@ -169,12 +172,15 @@
         -webkit-box-shadow: inset 2px 0px 3px rgba(0, 0, 0, 0.105469);
         -moz-box-shadow: inset 2px 0px 3px rgba(0, 0, 0, 0.105469);
         box-shadow: inset 2px 0px 3px rgba(0, 0, 0, 0.105469);
+        -webkit-border-radius: 0 4px 4px 0;
+        -moz-border-radius: 0 4px 4px 0;
+        border-radius: 0 4px 4px 0;
       }
       .label, .value {
         width: 50%;
       }
       .interest, .months {
-        width: calc(50% - 10px);
+        width: calc(50% - 5px);
       }
       .months {
         .label {
@@ -193,7 +199,7 @@
         font-size: 12px;
         font-weight: 400;
         text-align: right;
-        margin-bottom: 10px;
+        margin: 10px 0 10px 0;
       }
       .emi {
         color: #ffffff;

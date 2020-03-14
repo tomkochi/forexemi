@@ -188,8 +188,8 @@
         -webkit-border-radius: 4px;
         -moz-border-radius: 4px;
         border-radius: 4px;
-        height: 46px;
-        margin-bottom: 15px;
+        height: 40px;
+        margin-bottom: 10px;
         width: 100%;
       }
       .currency {
@@ -210,6 +210,9 @@
         width: 130px;
         background: #ffffff url("data:image/svg+xml,%3Csvg width='16' height='10' viewBox='0 0 16 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16 1.5L14.5 0L8 6.5L1.5 0L0 1.5L8 9.5L16 1.5Z' fill='%239B9B9B'/%3E%3C/svg%3E%0A") no-repeat 80px center;
         cursor: pointer;
+        -webkit-border-radius: 4px 0 0 4px;
+        -moz-border-radius: 4px 0 0 4px;
+        border-radius: 4px 0 0 4px;
       }
       .value {
         background: #EDEDED;
@@ -224,6 +227,9 @@
         -webkit-box-shadow: inset 2px 0px 3px rgba(0, 0, 0, 0.105469);
         -moz-box-shadow: inset 2px 0px 3px rgba(0, 0, 0, 0.105469);
         box-shadow: inset 2px 0px 3px rgba(0, 0, 0, 0.105469);
+        -webkit-border-radius: 0 4px 4px 0;
+        -moz-border-radius: 0 4px 4px 0;
+        border-radius: 0 4px 4px 0;
       }
     }
     .math {
