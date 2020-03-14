@@ -76,7 +76,7 @@ export default {
   -moz-box-shadow: 4px 3px 21px rgba(53, 73, 165, 0.6);
   box-shadow: 4px 3px 21px rgba(53, 73, 165, 0.6);
   &.skin-blue {
-    background: linear-gradient(135.18deg, #507EFF -5.4%, #3F5FF3 97.25%);
+    background: linear-gradient(135.18deg, rgb(87, 99, 255) -5.4%, rgb(84, 85, 250) 97.25%);
   }
   &.skin-grey {
     background: linear-gradient(135.18deg, grey -5.4%, lightgrey 97.25%);
