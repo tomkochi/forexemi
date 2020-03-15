@@ -216,7 +216,7 @@
         line-height: 46px;
         white-space: nowrap;
         width: 130px;
-        background: #ffffff url("data:image/svg+xml,%3Csvg width='16' height='10' viewBox='0 0 16 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16 1.5L14.5 0L8 6.5L1.5 0L0 1.5L8 9.5L16 1.5Z' fill='%239B9B9B'/%3E%3C/svg%3E%0A") no-repeat 80px center;
+        background: #ffffff url("data:image/svg+xml,%3Csvg width='16' height='10' viewBox='0 0 16 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16 1.5L14.5 0L8 6.5L1.5 0L0 1.5L8 9.5L16 1.5Z' fill='%239B9B9B'/%3E%3C/svg%3E%0A") no-repeat calc(100% - 15px) center;
         cursor: pointer;
         -webkit-border-radius: 4px 0 0 4px;
         -moz-border-radius: 4px 0 0 4px;
