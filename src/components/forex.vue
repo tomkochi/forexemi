@@ -53,7 +53,7 @@
 
     <div class="math">
       <div class="unit-price">
-        1 <span class="c-1">US Dollar</span> = <span class="amount">64.75</span> <span class="c-2">INR</span>
+        1 <span class="c-1">{{ currency1.currency }}</span> = <span class="amount">{{ unitValue }}</span> <span class="c-2">{{ currency2.currency }}</span>
       </div>
     </div>
     <!-- /.math -->
@@ -157,7 +157,6 @@
     created() {
       axios.get('https://us-central1-forex-api-proxy.cloudfunctions.net/forex')
           .then(response => {
-            console.log(response)
             let tmp = Object.entries(response.data.quotes)
             tmp.forEach(o => {
               this.currencies.push({
@@ -171,6 +170,14 @@
             this.currency1.value = this.currency1.value.toFixed(2)
             this.currency2.value = this.currency2.value.toFixed(2)
           })
+    },
+    computed: {
+      unitValue() {
+        if (!this.currencies.length) return 0
+        let v1 = this.currencies.find(c => c.currency === this.currency1.currency)
+        let v2 = this.currencies.find(c => c.currency === this.currency2.currency)
+        return (v2.value / v1.value).toFixed(2)
+      }
     },
   }
 </script>
