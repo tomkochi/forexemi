@@ -3,7 +3,7 @@
     <div class="heading">EMI Calculator</div>
 
     <div class="inputs">
-      <div class="loan-amount d-flex">
+      <div class="loan-amount d-flex flex-column">
         <label for="loan-amount" class="label">Loan Amount</label>
         <input
                 @focus="$event.target.select()"
@@ -134,6 +134,22 @@
 </script>
 
 <style lang="scss" scoped>
+  .d-block {
+    display: block;
+  }
+  .d-flex {
+    display: flex;
+  }
+  .a-i-center {
+    align-items: center;
+  }
+  .j-c-center {
+    justify-content: center;
+  }
+  .j-c-between {
+    justify-content: space-between;
+  }
+
   .emi {
     padding: 12px;
     .heading {
@@ -155,8 +171,9 @@
         font-size: 16px;
         font-weight: 500;
         color: #747474;
-        padding-left: 16px;
-        line-height: 46px;
+        padding: 0 10px 0 16px;
+        line-height: 40px;
+        white-space: nowrap;
         -webkit-border-radius: 4px 0 0 4px;
         -moz-border-radius: 4px 0 0 4px;
         border-radius: 4px 0 0 4px;
@@ -166,9 +183,10 @@
         font-size: 16px;
         font-weight: 400;
         color: #747474;
-        padding-left: 16px;
+        padding-left: 10px;
         border: none;
         outline: none;
+        line-height: 40px;
         -webkit-box-shadow: inset 2px 0px 3px rgba(0, 0, 0, 0.105469);
         -moz-box-shadow: inset 2px 0px 3px rgba(0, 0, 0, 0.105469);
         box-shadow: inset 2px 0px 3px rgba(0, 0, 0, 0.105469);

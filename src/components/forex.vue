@@ -157,13 +157,23 @@
     created() {
       axios.get('https://us-central1-forex-api-proxy.cloudfunctions.net/forex')
           .then(response => {
-            let tmp = Object.entries(response.data.quotes)
+            let tmp = Object.entries(response.data.rates)
+            // convert to USD base
             tmp.forEach(o => {
               this.currencies.push({
-                currency: o[0].substring(3),
+                currency: o[0],
                 value: o[1]
               })
             })
+
+            // get USD value
+            const usdValue = this.currencies.find(c => c.currency === 'USD').value
+
+            // convert to USD base
+            this.currencies.forEach((c, i) => {
+              this.currencies[i].value = this.currencies[i].value / usdValue
+            });
+
             // find USD and INR
             this.currency1 = (JSON.parse(JSON.stringify(this.currencies.find(c => c.currency === 'USD'))))
             this.currency2 = (JSON.parse(JSON.stringify(this.currencies.find(c => c.currency === 'INR'))))
@@ -183,6 +193,22 @@
 </script>
 
 <style lang="scss" scoped>
+  .d-block {
+    display: block;
+  }
+  .d-flex {
+    display: flex;
+  }
+  .a-i-center {
+    align-items: center;
+  }
+  .j-c-center {
+    justify-content: center;
+  }
+  .j-c-between {
+    justify-content: space-between;
+  }
+
   .forex {
     padding: 12px;
     .heading {
@@ -196,7 +222,6 @@
         -webkit-border-radius: 4px;
         -moz-border-radius: 4px;
         border-radius: 4px;
-        height: 40px;
         margin-bottom: 10px;
         width: 100%;
       }
@@ -213,7 +238,7 @@
         font-weight: 500;
         color: #747474;
         padding: 0 16px;
-        line-height: 46px;
+        line-height: 40px;
         white-space: nowrap;
         width: 130px;
         background: #ffffff url("data:image/svg+xml,%3Csvg width='16' height='10' viewBox='0 0 16 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16 1.5L14.5 0L8 6.5L1.5 0L0 1.5L8 9.5L16 1.5Z' fill='%239B9B9B'/%3E%3C/svg%3E%0A") no-repeat calc(100% - 15px) center;
@@ -223,21 +248,22 @@
         border-radius: 4px 0 0 4px;
       }
       .value {
-        background: #EDEDED;
+        background-color: #EDEDED;
         font-size: 16px;
         font-weight: 400;
         color: #747474;
         padding-left: 16px;
         border: none;
         outline: none;
-        display: block;
-        width: 100%;
+        display: inline-block;
+        width: calc(100% - 130px);
         -webkit-box-shadow: inset 2px 0px 3px rgba(0, 0, 0, 0.105469);
         -moz-box-shadow: inset 2px 0px 3px rgba(0, 0, 0, 0.105469);
         box-shadow: inset 2px 0px 3px rgba(0, 0, 0, 0.105469);
         -webkit-border-radius: 0 4px 4px 0;
         -moz-border-radius: 0 4px 4px 0;
         border-radius: 0 4px 4px 0;
+        line-height: 40px;
       }
     }
     .math {

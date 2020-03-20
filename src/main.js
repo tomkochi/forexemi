@@ -10,6 +10,7 @@
 
 import Vue from 'vue'
 import App from './App.vue'
+import CustomElement from './components/forex-emi.vue?shadow'
 
 Vue.config.productionTip = false
 

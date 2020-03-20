@@ -67,23 +67,28 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.emi-forex {
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  padding: 9px;
-  -webkit-box-shadow: 4px 3px 21px rgba(53, 73, 165, 0.6);
-  -moz-box-shadow: 4px 3px 21px rgba(53, 73, 165, 0.6);
-  box-shadow: 4px 3px 21px rgba(53, 73, 165, 0.6);
-  &.skin-blue {
-    background: linear-gradient(135.18deg, rgb(87, 99, 255) -5.4%, rgb(84, 85, 250) 97.25%);
+  * {
+    font-family: "Barlow", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
-  &.skin-grey {
-    background: linear-gradient(135.18deg, grey -5.4%, lightgrey 97.25%);
+  .emi-forex {
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    padding: 9px;
+    -webkit-box-shadow: 4px 3px 21px rgba(53, 73, 165, 0.6);
+    -moz-box-shadow: 4px 3px 21px rgba(53, 73, 165, 0.6);
+    box-shadow: 4px 3px 21px rgba(53, 73, 165, 0.6);
+    &.skin-blue {
+      background: linear-gradient(135.18deg, rgb(87, 99, 255) -5.4%, rgb(84, 85, 250) 97.25%);
+    }
+    &.skin-grey {
+      background: linear-gradient(135.18deg, grey -5.4%, lightgrey 97.25%);
+    }
+    .separator {
+      border-bottom: 1px solid rgba(58, 76, 128, 0.196784);
+      margin: 6px 0;
+    }
   }
-  .separator {
-    border-bottom: 1px solid rgba(58, 76, 128, 0.196784);
-    margin: 6px 0;
-  }
-}
 </style>
