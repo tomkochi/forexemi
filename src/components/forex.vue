@@ -158,8 +158,7 @@
       axios.get('https://us-central1-forex-api-proxy.cloudfunctions.net/forex')
           .then(response => {
             let tmp = Object.entries(response.data.rates)
-            // convert to USD base
-            console.log(1)
+
             tmp.forEach(o => {
               this.currencies.push({
                 currency: o[0],
@@ -167,16 +166,14 @@
               })
             })
 
-            console.log(2)
-
             // get USD value
             const usdValue = this.currencies.find(c => c.currency === 'USD').value
-            console.log(3)
+
             // convert to USD base
             this.currencies.forEach((c, i) => {
               this.currencies[i].value = this.currencies[i].value / usdValue
             });
-            console.log(4)
+
             // find USD and INR
             this.currency1 = (JSON.parse(JSON.stringify(this.currencies.find(c => c.currency === 'USD'))))
             this.currency2 = (JSON.parse(JSON.stringify(this.currencies.find(c => c.currency === 'INR'))))
